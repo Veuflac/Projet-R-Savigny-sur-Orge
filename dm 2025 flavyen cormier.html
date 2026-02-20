@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.32">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Flavyen Cormier">
+<meta name="dcterms.date" content="2026-02-10">
+
+<title>L’IMMOBILIER DANS LA COMMUNE DE Savigny-sur-Orge</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="dm 2025 flavyen cormier_files/libs/clipboard/clipboard.min.js"></script>
+<script src="dm 2025 flavyen cormier_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="dm 2025 flavyen cormier_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="dm 2025 flavyen cormier_files/libs/quarto-html/popper.min.js"></script>
+<script src="dm 2025 flavyen cormier_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="dm 2025 flavyen cormier_files/libs/quarto-html/anchor.min.js"></script>
+<link href="dm 2025 flavyen cormier_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="dm 2025 flavyen cormier_files/libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="dm 2025 flavyen cormier_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="dm 2025 flavyen cormier_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="dm 2025 flavyen cormier_files/libs/bootstrap/bootstrap-bb462d781dde1847d9e3ccf7736099dd.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="fullcontent quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">L’IMMOBILIER DANS LA COMMUNE DE Savigny-sur-Orge</h1>
+<p class="subtitle lead">Rapport confidentiel n°1</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Flavyen Cormier </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">February 10, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="chargement-des-données" class="level3">
+<h3 class="anchored" data-anchor-id="chargement-des-données">Chargement des données</h3>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>     com_code          com_nom  ann        type   prix sup nbp        X       Y
+1139    91589 Savigny-sur-Orge 2017      Maison 305000  92   4 652162.8 6842390
+1140    91589 Savigny-sur-Orge 2017      Maison 310000 103   6 653260.6 6843344
+1141    91589 Savigny-sur-Orge 2017 Appartement 180000  71   4 652355.4 6841552
+1142    91589 Savigny-sur-Orge 2017      Maison 227000  63   4 652380.6 6843844
+1143    91589 Savigny-sur-Orge 2017      Maison 320000  82   4 651868.4 6842425
+1144    91589 Savigny-sur-Orge 2017      Maison 318000 101   5 652637.8 6842780
+     dist_gare
+1139  456.1087
+1140 1390.7935
+1141  403.6877
+1142 1899.5923
+1143  626.1301
+1144  908.7380</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>      com_code          com_nom  ann        type   prix sup nbp        X
+90841    91589 Savigny-sur-Orge 2021      Maison 420000  87   5 652382.1
+90844    91589 Savigny-sur-Orge 2021      Maison 378000  86   5 651993.7
+90845    91589 Savigny-sur-Orge 2021 Appartement  87200  55   3 651255.5
+90847    91589 Savigny-sur-Orge 2021      Maison 368000  84   4 651904.2
+90848    91589 Savigny-sur-Orge 2021      Maison 370000  60   4 652035.6
+90888    91589 Savigny-sur-Orge 2021 Appartement 209000  56   3 651593.8
+            Y dist_gare
+90841 6842498  561.9785
+90844 6843257 1339.8532
+90845 6841609  572.9025
+90847 6842901 1023.2051
+90848 6842457  562.8138
+90888 6843363 1509.5562</code></pre>
+</div>
+</div>
+</section>
+<section id="savigny-sur-orge" class="level1">
+<h1>SAVIGNY-SUR-ORGE</h1>
+<section id="introduction-2-pts" class="level2">
+<h2 class="anchored" data-anchor-id="introduction-2-pts">INTRODUCTION (2 pts)</h2>
+<p>Savigny-sur-Orge est une commune française située dans le département de l’Essone dans la banlieu parisienne. Il y a 37 775 Saviniens avec une densité de 5 420 hab./km² en 2022 selon l’INSEE.Desservie par le RER C, la ville jouit d’une bonne accessibilité à Paris et est par conséquent attractive.Savigny-sur-Orges est réputé pour son caractère paisible et résidentiels.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Image%20savigny.jpg" class="img-fluid figure-img"></p>
+<figcaption><strong>Savigny-sur-Orge</strong></figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="plan%20savigny.jpg" class="img-fluid figure-img"></p>
+<figcaption><strong>Plan Savigny-sur-Orge</strong></figcaption>
+</figure>
+</div>
+</section>
+<section id="a.-situation-globale-2017-2021-10-pts" class="level2">
+<h2 class="anchored" data-anchor-id="a.-situation-globale-2017-2021-10-pts">A. SITUATION GLOBALE 2017-2021 (10 pts)</h2>
+<p>Sur une periode de 4 ans (2017-2021), 2670 biens ont été vendus a Savigny-sur-Orge.</p>
+<section id="a.1-plus-de-maisons-ou-dappartements" class="level3">
+<h3 class="anchored" data-anchor-id="a.1-plus-de-maisons-ou-dappartements">A.1 Plus de maisons ou d’appartements</h3>
+<p>Entre 2017 et 2021, 1150 appartements on été vendu tandis que 1520 maisons ont été vendu</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="dm-2025-flavyen-cormier_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="2100"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="a.2-prix-au-m2-sur-lensemble-de-la-période" class="level3">
+<h3 class="anchored" data-anchor-id="a.2-prix-au-m2-sur-lensemble-de-la-période">A.2 : Prix au m2 sur l’ensemble de la période</h3>
+<p>Le graphique et le résumé statistique ci-dessous nous montrent la distribution des prix au m² à Savigny-sur-Orge.</p>
+<p>D’après les résultats obtenus sur R, le prix minimum est de 527 € au m² tandis que le prix maximum est de 157114 € au m² , ce qui montre une forte variation entre les biens les moins et les plus chers. La médiane est de 3307€, ce qui signifie que la moitié des ventes de biens se vendent à un prix inférieur et l’autre moitié à un prix supérieur.</p>
+<p>La moyenne quant à elle s’élève à 3429€, un peu différente de la médiane, ce qui indique quelques valeurs extrêmes (visible sur le graphique avec les points isolés) qui viennent augmenter la moyenne.</p>
+<p>Enfin la majorité des prix se situe entre le premier quartile (Q1) et le troisième quartile (Q3), donc entre 2060€ et 4041€.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="dm-2025-flavyen-cormier_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="2100"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="a.3-comparez-le-prix-au-m2-des-maisons-et-des-appartements" class="level3">
+<h3 class="anchored" data-anchor-id="a.3-comparez-le-prix-au-m2-des-maisons-et-des-appartements">A.3 : Comparez le prix au m2 des maisons et des appartements</h3>
+<p>L’analyse du prix médian au m² confirme une distinction entre les appartements et les maisons.</p>
+<p>Le marché des appartements qui est représenté par la boîte verte est moins cher avec une médiane de 2688€/m² , soit 1000€ de moins que la médiane des maisons qui atteint les 3721€/m².</p>
+<p>Les prix des maisons sont également un peu plus dispersés avec un écart interquartile de 1342€, tandis que les appartements ont une dispersion similaire de 1306€.</p>
+<p>Enfin, les deux marchés affichent des extrêmes comparables, avec un prix maximum de 15714,3€ pour une maison et 15000,0€ pour un appartement.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="dm-2025-flavyen-cormier_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="2100"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="a.4-votre-commune-est-elle-riche-ou-pauvre" class="level3">
+<h3 class="anchored" data-anchor-id="a.4-votre-commune-est-elle-riche-ou-pauvre">A.4 Votre commune est-elle riche ou pauvre</h3>
+<p>Savigny-sur-Orge est une ville abordable comparée à la moyenne des autres communes. Ce résultat est évident en comparant le prix médian au m² : à Savigny, le prix médian est de 3 307,7€/m², ce qui est inférieur de plus de 600€ par rapport à la médiane des autres communes, qui est de 3 928,6€/m².</p>
+<p>Cette différence ne se limite pas qu’à la médiane : l’ensemble du marché immobilier de Savigny-sur-Orge est décalé vers la gauche , comme le montrent les boîtes à moustache. Les biens les plus abordables de Savigny commencent à 2 606 €/m², contre 3000 €/m² ailleurs. De même, les biens haut de gamme (Q3) montent jusqu’à 4 041€/m² pour Savigny, alors qu’ils montent jusqu’à 5 200€/m² dans les autres communes.</p>
+<p>Les chiffres sont donc sans appels : que l’on regarde le prix moyen, le bas de gamme ou le haut de gamme, Savigny-sur-Orge se positionne systématiquement dans une fourchette de prix inférieure à celle des autres communes venant de notre base de données.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="dm-2025-flavyen-cormier_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="2100"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="dm-2025-flavyen-cormier_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="2100"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Le graphique montre qu’ il y a un écart significatif de près de 900€/m² entres les deux groupes. Le prix moyen de Savigny est de 3 429€/m² tandis que les autres communes atteignent 4 307,7€/m²</p>
+</section>
+<section id="a.5-autres-remarques-bonus-1-pt" class="level3">
+<h3 class="anchored" data-anchor-id="a.5-autres-remarques-bonus-1-pt">A.5 Autres remarques (Bonus : +1 pt)</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="dm-2025-flavyen-cormier_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="2100"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Le bien le plus commun possède 3 pièces, on remarque que la distribution n’est pas parfaitement symétrique , elle est tirée vers le haut par quelques valeurs exceptionnelles, comme le montre le 13 pièces.</p>
+</section>
+</section>
+<section id="b.-impact-de-la-crise-du-covid-en-2020-21-6-pts" class="level2">
+<h2 class="anchored" data-anchor-id="b.-impact-de-la-crise-du-covid-en-2020-21-6-pts">B. IMPACT DE LA CRISE DU COVID EN 2020-21 (6 pts)</h2>
+<p>En dehors de leur asymétrie commune, la comparaison des deux histogrammes montre deux changements majeurs sur le marché :</p>
+<p>Un décalage net des prix vers la droite lors de la période Covid : dans le graphique jaune le pic des ventes était dans la tranche des 3000-4000€/m², alors que pendant le COVID (graphique vert) le pic de ventes s’est décalé et se situe désormais dans la tranche des 4000-5000 €/m². Ceci montre une hausse généralisée des prix.</p>
+<p>La suite naturelle est qu’il y a eu une diminution des ventes bon marché, on observe une forte réduction du volume de ventes à bas prix, avant le COVID les tranches des prix inférieures comme la tranche de 2000-3000 €/m² représentaient un volume de vente important de 400 ventes alors que cette même tranche a diminué pendant la crise du COVID (250 ventes), confirmant que les biens peu chers se sont raréfiés.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="dm-2025-flavyen-cormier_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="2100"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="dm-2025-flavyen-cormier_files/figure-html/unnamed-chunk-9-2.png" class="img-fluid figure-img" width="2100"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>         Type       Periode      Min  Moyenne  Mediane       Max Nombre
+1      Maison   Avant Covid 722.8916 3776.425 3562.500 15714.286    897
+2      Maison Pendant Covid 954.2432 4192.334 3941.875 10982.143    623
+3 Appartement   Avant Covid 527.2727 2625.857 2571.429  8057.353    667
+4 Appartement Pendant Covid 567.1642 2911.144 2799.535 15000.000    483</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Maisons avant / pendant Covid</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(maisonsavant<span class="sc">$</span>prixm2, maisonscovid<span class="sc">$</span>prixm2,</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">horizontal =</span> T,</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">main =</span> <span class="st">"Maisons : avant et pendant le Covid"</span>,</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>        <span class="at">names =</span> <span class="fu">c</span>(<span class="st">"Avant Covid"</span>, <span class="st">"Pendant Covid"</span>),</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>        <span class="at">ylab =</span> <span class="st">"Prix au m²"</span>,</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>        <span class="at">col =</span> <span class="fu">c</span>(<span class="st">"lightblue"</span>,<span class="st">"lightgreen"</span>,</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>        <span class="at">sub =</span> <span class="st">"Source: Observatoire DVF"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="dm-2025-flavyen-cormier_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Les prix au m² des maisons ont augmenté pendant la période Covid, avec une médiane passant de 3562 € à 3942 €, et des valeurs extrêmes toujours présentes.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="dm-2025-flavyen-cormier_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid figure-img" width="2100"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Les prix au m² des appartements ont également augmenté pendant le Covid, la médiane passant de 2571 € à 2799 €, avec quelques valeurs très élevées qui restent.</p>
+<p>Donc les prix ont fluctué, mais ils ont augmenté. Cependant la hausse n’est pas la même pour les maisons et pour les appartements. La crise sanitaire a eu pour conséquence d’augmenter les prix des maisons au m² de 10,7%, tandis que les appartements ont connu une hausse moins fulgurante avec une hausse de 8,9%.</p>
+</section>
+<section id="conclusion-2-pt" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion-2-pt">CONCLUSION (2 pt)</h2>
+<p>L’analyse des 2 670 transactions immobilières à Savigny-sur-Orge entre 2017 et 2021 : le marché est dynamique.</p>
+<p>Cette ville n’est pas comme les autres, la commune est globalement plus abordable que les autres villes comme vu ci-dessus, mais ce sont les maisons qui dominent le marché. Les maisons représentent non seulement la majorité des ventes (1520 unités), mais elles sont nettement plus chères au m², le fait que la ville soit abordable est dû à sa forte densité d’appartements “bon marché”. Mais le bien type reste la propriété familiale avec 3 ou 4 pièces.</p>
+<p>Deuxièmement, le COVID n’a pas freiné ce marché; il l’a plutôt accéléré. Il n’a en aucun cas subi une baisse, les prix ont connu une inflation, visible par le décalage complet des distributions des prix. Cette hausse a été marquée pour les appartements (8,9%) mais encore plus marquée pour les maisons (10,7%) plus chères qu’avant le COVID.</p>
+<p>Savigny-sur-Orge se révèle donc être un marché plutôt attractif, grâce à son accessibilité du prix, mais aussi par son ensemble de maisons. Ce marché convient donc pour beaucoup de clients ce qui explique la popularité de cette ville tout à fait charmante.</p>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
